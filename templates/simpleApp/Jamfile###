@@ -1,0 +1,12 @@
+SubDir HAIKU_TOP src apps ##app.folder## ;
+
+UsePrivateHeaders shared ;
+
+Application ##app.name## :
+	##app.class##.cpp
+	##main.window.class##.cpp
+	##main.view.class##.cpp
+
+	: be $(TARGET_LIBSTDC++)
+	: ##app.name##.rdef
+;
