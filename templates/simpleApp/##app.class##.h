@@ -5,13 +5,15 @@
  * Authors:
  * 		##author##
  */
-
 #ifndef ##app.header.guard##
 #define ##app.header.guard##
 
+
 #include <Application.h>
 
+
 class BWindow;
+
 
 class ##app.class## : public BApplication {
 
@@ -21,9 +23,10 @@ public:
 
 	virtual	void				AboutRequested();
 	virtual void				MessageReceived(BMessage *message);
-	
+
 protected:
 	BWindow*					fMainWindow;
 };
+
 
 #endif	// ##app.header.guard##

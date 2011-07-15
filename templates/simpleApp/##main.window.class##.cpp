@@ -6,6 +6,7 @@
  * 		Alexandre Deckner <alex@zappotek.com>
  */
 
+
 #include "##main.window.class##.h"
 
 #include <Application.h>

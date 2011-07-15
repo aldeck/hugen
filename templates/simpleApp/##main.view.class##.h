@@ -8,7 +8,9 @@
 #ifndef ##main.view.header.guard##
 #define ##main.view.header.guard##
 
+
 #include <View.h>
+
 
 class ##main.view.class## : public BView {
 public:
@@ -18,5 +20,6 @@ public:
 	virtual void	AttachedToWindow();
 	virtual void	FrameResized(float width, float height);
 };
+
 
 #endif	// ##main.view.header.guard##

@@ -8,9 +8,11 @@
 #ifndef ##main.window.header.guard##
 #define ##main.window.header.guard##
 
+
 #include <Window.h>
 
 class ##main.view.class##;
+
 
 class ##main.window.class## : public BWindow {
 public:
@@ -23,5 +25,6 @@ public:
 protected:
 			##main.view.class##*			f##main.view.class##;
 };
+
 
 #endif	// ##main.window.header.guard##

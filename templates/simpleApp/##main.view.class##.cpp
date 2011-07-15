@@ -6,9 +6,11 @@
  * 		##author##
  */
 
+
 #include "##main.view.class##.h"
 
 #include <stdio.h>
+
 
 ##main.view.class##::##main.view.class##(BRect frame)
 	:
