@@ -18,8 +18,7 @@ def run(templateName, variables):
 
     file.close()
 
-    outputFileName = outputFileName.replace("###", "") # clean ## when no variable in filename but just the template tag
-    print "generate " + outputFileName + " (" + templateName + ")"
+    print "generated " + outputFileName + " (" + templateName + ")"
     dir = os.path.dirname(outputFileName)
     if not os.path.isdir(dir):
         os.makedirs(dir)
@@ -36,8 +35,8 @@ def runAll(templateFileSet, variables):
 def visit(result, dir, names):
     for name in names:
         path = os.path.join(dir, name)
-        if os.path.isfile(path) and os.path.basename(path).find("##") != -1:
-            print "file", path
+        if os.path.isfile(path):
+            print "template", path
             result.append(path)
 
 
