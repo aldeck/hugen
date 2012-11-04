@@ -6,15 +6,15 @@ import re, sys, os
 
 
 def run(templateName, variables):
-    outputFileName = 'generated/' + variables["app.folder"]  + "/" + os.path.basename(templateName)
+    outputFileName = 'generated/' + variables["app.folder"] + "/" + os.path.basename(templateName)
 
     file = open(templateName, 'r')
     text = file.read()
 
     for name, value in variables.items():
-    	#print name, value
-    	text = text.replace("##" + name + "##", value)
-    	outputFileName = outputFileName.replace("##" + name + "##", value)
+        #print name, value
+        text = text.replace("##" + name + "##", value)
+        outputFileName = outputFileName.replace("##" + name + "##", value)
 
     file.close()
 
@@ -30,7 +30,7 @@ def run(templateName, variables):
 
 def runAll(templateFileSet, variables):
     for template in templateFileSet:
-    	run(template, variables)
+        run(template, variables)
 
 
 def visit(result, dir, names):
@@ -40,9 +40,6 @@ def visit(result, dir, names):
             print "file", path
             result.append(path)
 
-
-#if len(sys.argv) >= 2 and sys.argv[1] != "--help":
-#    run(sys.argv[1], options)
 
 if len(sys.argv) == 3 and sys.argv[1] != "--help":
     templateFiles = []
